@@ -21,18 +21,17 @@
             <a style="text-decoration: none;" href="../html/homeGetPet.html">
                 <h1 class="rammetto-one-regular">GetPet</h1>
             </a>
+
+            <!-- Ícone do menu hambúrguer -->
+            <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+
             <div class="links">
-                <a style="text-decoration: none;" href="../html/homeGetPet.html">
-                    Home
-                </a>
-                <a style="text-decoration: none;" href="../html/homeGetPet.html">
-                    Sobre
-                </a>
-                <a style="text-decoration: none;" href="../html/homeGetPet.html">
-                    Contato
-                </a>
+                <a href="../html/homeGetPet.html">Home</a>
+                <a href="../html/homeGetPet.html">Sobre</a>
+                <a href="../html/homeGetPet.html">Contato</a>
             </div>
         </nav>
+
     </header>
     <main>
         <section>
@@ -93,5 +92,14 @@
     </main>
 </body>
 <!-- <script src="../js/script.js"></script> -->
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.links');
+
+    menuToggle.addEventListener('click', () => {
+        links.classList.toggle('active');
+    });
+</script>
+
 
 </html>
