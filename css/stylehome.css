@@ -1,6 +1,7 @@
 body {
     margin: 0 !important;
     padding: 0 !important;
+    background-color: #F5F5F5;
 
     .rammetto-one-regular {
         font-family: "Rammetto One", sans-serif;
@@ -22,6 +23,12 @@ body {
 
 .logo {
     height: 40px;
+}
+
+.logotext {
+    position: absolute;
+    left: 80px;
+    top: -10px;
 }
 
 .menu-toggle {
@@ -87,10 +94,10 @@ body {
 }
 
 .container_cards {
-    margin-top: 40px;
+    margin: 80px 50px 3px 50px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .cardpags {
@@ -159,5 +166,130 @@ body {
 
 .imgbanner2 {
     width: 400px !important;
-    margin-top: 16px;
+    height: 250px !important;
+    margin-top: 40px;
+    margin-left: 80px;
+}
+
+.imgbanner3 {
+    width: 1000px !important;
+    height: 500px !important;
+    margin-top: -96px;
+}
+
+.divtexto {
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.divtexto h1 {
+    margin-left: 150px;
+    text-align: center;
+    font-weight: 900;
+    color: white;
+    font-size: 40px;
+}
+
+.textoslider1 {
+    left: 100px;
+    position: relative;
+    color: white;
+}
+
+.textoslider2 {
+    width: 400px;
+    top: -8px;
+    right: -100px;
+    position: relative;
+    color: white;
+}
+
+.textoslider3 {
+    width: 400px;
+    top: -8px;
+    right: -100px;
+    position: relative;
+    color: white;
+}
+
+.textcategorias {
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.divcategorias {
+    justify-content: center;
+    display: flex;
+    gap: 100px;
+}
+
+.n-1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #365914;
+    border: 1px #365914;
+}
+
+.n-2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #71AB3E;
+    border: 1px #71AB3E;
+}
+
+.n-3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #D4D955;
+    border: 1px #D4D955;
+}
+
+.n-4 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #F2EFBD;
+    border: 1px #F2EFBD;
+}
+
+.n-5 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #F26B5E;
+    border: 1px #F26B5E;
+}
+
+#content div {
+    display: none;
+}
+
+.c-01 {
+    background-color: #365914;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    padding: 80px;
+    margin-left: 200px;
+    width: 750px;
+}
+
+.quadrado {
+    background-color: #365914;
+    padding: 50px;
+    border-radius:  50px 50px 0 0 ;
+    height: 100px;
+    margin-left: 199px;
+    margin-top: -110px;
+    width: 1px;
+
+}
+
+.c-02 {
+    background-color: #71AB3E;
 }
