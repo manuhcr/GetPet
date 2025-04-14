@@ -119,62 +119,137 @@ body {
     font-size: 22px;
 }
 
-.slider {
-    top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    transition: transform 1s ease;
+.container_slider {
     position: relative;
-    z-index: -1;
-    z-index: -1;
+    max-width: 100%;
 }
 
-.slide_1 {
+/* Wrapper para os slides */
+.slider_wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin-right: 250px;
+}
+
+/* Estilo geral dos slides */
+.slide {
+    flex: 0 0 100%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Slide ativo */
+.slide.active {
+    display: flex;
+}
+
+/* Slider 1 */
+.slider_1 {
     background-color: #F26B5E;
-    display: flex;
-    gap: 50px;
-    width: 1166px;
-    height: 250px;
-    min-width: 80%;
 }
 
-.slide_2 {
+.slider_1 h5 {
+    font-size: 50px;
+    color: #fff;
+    margin: 0;
+    font-family: "Mukta Vaani";
+    font-weight: 600;
+}
+
+.slider_1 p {
+    color: #fff;
+    font-family: "Mukta Vaani";
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.slider_1 img {
+    margin-top: 77px;
+    margin-right: -50px;
+}
+
+/* Slider 2 */
+.slider_2 {
     background-color: #365914;
-    display: flex;
-    gap: 50px;
-    width: 1166px;
-    height: 250px;
-    min-width: 80%;
 }
 
-.slide_3 {
+.slider_2 h5 {
+    font-size: 50px;
+    color: #fff;
+    margin: 0;
+    font-family: "Mukta Vaani";
+    font-weight: 600;
+}
+
+.slider_2 p {
+    color: #fff;
+    font-family: "Mukta Vaani";
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.slider_2 img {
+    margin-top: 90px;
+}
+
+/* Slider 3 */
+.slider_3 {
     background-color: #71AB3E;
+}
+
+.slider_3 h5 {
+    font-size: 50px;
+    color: #fff;
+    margin: 0;
+    font-family: "Mukta Vaani";
+    font-weight: 600;
+}
+
+.slider_3 p {
+    color: #fff;
+    font-family: "Mukta Vaani";
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.slider_3 img {
+    margin-top: 109px;
+    margin-right: -50px;
+}
+
+/* Indicadores */
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    gap: 50px;
-    width: 1166px;
-    height: 250px;
-    min-width: 80%;
+    gap: 10px;
 }
 
-.imgbanner1 {
-    width: 1000px !important;
-    height: 500px !important;
-    margin-top: -96px;
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.imgbanner2 {
-    width: 400px !important;
-    height: 250px !important;
-    margin-top: 40px;
-    margin-left: 80px;
+.indicator.active {
+    background-color: #fff;
 }
 
 .imgbanner3 {
-    width: 1000px !important;
-    height: 500px !important;
-    margin-top: -96px;
+    margin-top: 160px !important;
 }
 
 .divtexto {
@@ -282,7 +357,7 @@ body {
 .quadrado {
     background-color: #365914;
     padding: 50px;
-    border-radius:  50px 50px 0 0 ;
+    border-radius: 50px 50px 0 0;
     height: 100px;
     margin-left: 199px;
     margin-top: -110px;

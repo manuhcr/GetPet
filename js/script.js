@@ -1,27 +1,54 @@
-let index = 0;  // Índice do slide atual
+let slideAtual = 0;  // Índice do slide atual
 const slides = document.querySelectorAll('.slide');  // Seleciona todos os slides
 const totalSlides = slides.length;  // Conta o total de slides
+const indicators = document.querySelectorAll(".indicator");
 
 // Função para mover o slide de scordo com o parâmetro step
-function moveSlide(step) {
-    index += step;  // Atualiza o índice com o valor de "step" (1 para avançar, -1 para voltar)
+function showSlide(index) {
+    slides.forEach((slide) => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+    indicators[index].classList.add("active")
 
-    if (index >= totalSlides) // Se o indice for maior ou igual ao numero total de slides
-    {
-        index = 0;  // Avança para o primeiro slide
-    } else if (index < 0) // Se o indice for menor q 0, ou seja, se estiver no primeiro slide
-    {
-        index = totalSlides - 1;  // Volta para o último slide
+}
+function proxSlide() {
+    slideAtual = (slideAtual + 1) % totalSlides;
+    showSlide(slideAtual);
+}
+
+// Configurar o intervalo automático para mudar de slide a cada segundos
+function comecarSlider() {
+    setInterval(proxSlide, 5000);
+}
+
+
+showSlide(slideAtual);
+comecarSlider();
+// Adiciona evento de clique nos indicadores
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener("click", () => {
+        slideAtual = index;
+        showSlide(slideAtual);
+    });
+});
+
+const menuToggle = document.querySelector('.menu-toggle');
+const links = document.querySelector('.links');
+
+menuToggle.addEventListener('click', () => {
+    links.classList.toggle('active');
+});
+function apareceConteudo(categoria) {
+    const content = document.querySelectorAll('#content div')[categoria];
+    const square = document.querySelectorAll('.quadrado');
+    // Verifica se o conteúdo está visível e alterna entre mostrar e esconder
+    if (content.style.display == 'block') {
+        content.style.display = 'none';  // Esconde o conteúdo
+    } else {
+        // Esconde todos os conteúdos primeiro
+        document.querySelectorAll('#content div').forEach(div => div.style.display = 'none');
+        // Exibe o conteúdo correspondente ao botão clicado
+        const square = document.querySelectorAll('.quadrado')
+        content.style.display = 'block';
+        square.style.display = 'block';
     }
-
-    // Move a posição da .slider para mostrar o slide correto
-    document.querySelector('.slider').style.transform = `translateX(-${index * 80}%)`;
 }
-
-// Função para avançar automaticamente
-function autoMove() {
-    moveSlide(1);  // Avança um slide
-}
-
-// Configurar o intervalo automático para mudar de slide a cada 3 segundos
-setInterval(autoMove, 3000);

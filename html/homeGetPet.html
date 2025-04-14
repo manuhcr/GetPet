@@ -61,40 +61,48 @@
             </div>
         </section>
         <section>
-            <div class="slider">
-                <div class="slide_1">
-                    <div class="divtexto">
-                        <h1>Adote hoje!</h1>
-                        <p class="textoslider1">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <div class="container_slider">
+                <div class="slider_wrapper">
+                    <div class="slider_1 slide active">
+                        <div class="texto_banner">
+                            <h5>Adote hoje!</h5>
+                            <p>Cerca de 30% dos animais adotados são resgatados de situações de abandono ou maus-tratos.
+                                A
+                                adoção transforma vidas – tanto dos bichinhos quanto das pessoas que os acolhem!</p>
+                        </div>
+                        <img src="../img/dogslider1.png" alt="">
                     </div>
-                    <img src="../img/dogslider1.png" class="imgbanner1" alt="">
-                </div>
-                <div class="slide_2">
-                    <img src="../img/coelhobanner2.png" class="imgbanner2" alt="">
-                    <div class="divtexto">
-                        <h1>Adote hoje!</h1>
-                        <p class="textoslider2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="slide_3">
-                    <div class="divtexto">
-                        <h1>Adote hoje!</h1>
 
-                        <p class="textoslider3">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="slider_2 slide">
+                        <img src="../img/coelhobanner2.png" alt="" width="500px">
+                        <div class="texto_banner">
+                            <h5>Cuida de mim!</h5>
+                            <p>Mais de 80% dos animais em situação de rua nunca recebem cuidados veterinários básicos,
+                                como
+                                vacinas ou vermífugos. Por isso, a conscientização e o resgate são tão importantes!</p>
+                        </div>
                     </div>
-                    <img src="../img/dogslider1.png" class="imgbanner3" alt="">
+
+                    <div class="slider_3 slide">
+                        <div class="texto_banner">
+                            <h5>Humano Ingrato!</h5>
+                            <p>Estudos mostram que animais de estimação podem reduzir os níveis de estresse, ansiedade e
+                                até
+                                pressão arterial em seus tutores. Eles não só recebem amor, como também nos oferecem
+                                companhia e bem-estar emocional</p>
+                        </div>
+                        <img class="imgbanner3" src="../img/gatinhobanner3.png" width="500" alt="">
+                    </div>
+                </div>
+                <!-- Indicadores (opcional) -->
+                <div class="indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
                 </div>
             </div>
         </section>
+
         <section>
             <h1 class=" textcategorias rammetto-one-regular">Categorias</h1>
             <div class="divcategorias">
@@ -115,30 +123,4 @@
         </section>
     </main>
 </body>
-<!-- <script src="../js/script.js"></script> -->
-<script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const links = document.querySelector('.links');
-
-    menuToggle.addEventListener('click', () => {
-        links.classList.toggle('active');
-    });
-    function apareceConteudo(categoria) {
-        const content = document.querySelectorAll('#content div')[categoria];
-        const square = document.querySelectorAll('.quadrado');
-        // Verifica se o conteúdo está visível e alterna entre mostrar e esconder
-        if (content.style.display == 'block') {
-            content.style.display = 'none';  // Esconde o conteúdo
-        } else {
-            // Esconde todos os conteúdos primeiro
-            document.querySelectorAll('#content div').forEach(div => div.style.display = 'none');
-            // Exibe o conteúdo correspondente ao botão clicado
-            const square = document.querySelectorAll('.quadrado')
-            content.style.display = 'block';
-            square.style.display = 'block';
-        }
-    }
-</script>
-
-
-</html>
+<script src="../js/script.js"></script>
