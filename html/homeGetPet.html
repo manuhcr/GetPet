@@ -103,24 +103,20 @@
             </div>
         </section>
 
-        <section>
-            <h1 class=" textcategorias rammetto-one-regular">Categorias</h1>
-            <div class="divcategorias">
-                <button class="n-1" onclick="apareceConteudo(0)"></button>
-                <button class="n-2" onclick="apareceConteudo(1)"></button>
-                <button class="n-3" onclick="apareceConteudo(2)"></button>
-                <button class="n-4" onclick="apareceConteudo(3)"></button>
-                <button class="n-5" onclick="apareceConteudo(4)"></button>
-            </div>
-            <div class="quadrado"></div>
-            <div id="content" class="p">
-                <div class="c-01">Conteúdo da Categoria 1</div>
-                <div class="c-02">Conteúdo da Categoria 2</div>
-                <div class="c-03">Conteúdo da Categoria 3</div>
-                <div class="c-04">Conteúdo da Categoria 4</div>
-                <div class="c-05">Conteúdo da Categoria 5</div>
-            </div>
-        </section>
+        <h1 class="textcategorias rammetto-one-regular">Categorias</h1>
+
+        <div class="divcategorias">
+            <button class="n-1" onclick="apareceConteudo(0, 'c-01', this)"></button>
+            <button class="n-2" onclick="apareceConteudo(1, 'c-02', this)"></button>
+            <button class="n-3" onclick="apareceConteudo(2, 'c-03', this)"></button>
+            <button class="n-4" onclick="apareceConteudo(3, 'c-04', this)"></button>
+            <button class="n-5" onclick="apareceConteudo(4, 'c-05', this)"></button>
+        </div>
+
+        <div id="content-container">
+            <div id="calda" class="calda"></div>
+            <div id="conteudo" class="quadrado">Selecione uma categoria</div>
+        </div>
     </main>
 </body>
 <script src="../js/script.js"></script>
