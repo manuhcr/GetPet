@@ -46,7 +46,7 @@
                     <a href="">Adestramento</a>
                 </div>
                 <div class="cardpags">
-                    <a href="">Veterinário</a>
+                    <a href="../html/vets.html">Veterinário</a>
                 </div>
                 <div class="cardpags">
                     <a href="">Quiz</a>
@@ -107,11 +107,11 @@
             <h1 class="textcategorias rammetto-one-regular">Categorias</h1>
 
             <div class="divcategorias">
-                <button class="n-1" onclick="apareceConteudo(0, 'c-01', '1')"></button>
-                <button class="n-2" onclick="apareceConteudo(1, 'c-02', '2')"></button>
-                <button class="n-3" onclick="apareceConteudo(2, 'c-03', '3')"></button>
-                <button class="n-4" onclick="apareceConteudo(3, 'c-04', '4')"></button>
-                <button class="n-5" onclick="apareceConteudo(4, 'c-05', '5')"></button>
+                <button class="botao n-1" onclick="apareceConteudo(0, 'c-01', '1')"></button>
+                <button class="botao n-2" onclick="apareceConteudo(1, 'c-02', '2')"></button>
+                <button class="botao n-3" onclick="apareceConteudo(2, 'c-03', '3')"></button>
+                <button class="botao n-4" onclick="apareceConteudo(3, 'c-04', '4')"></button>
+                <button class="botao n-5" onclick="apareceConteudo(4, 'c-05', '5')"></button>
             </div>
 
             <div id="content-container">
@@ -123,4 +123,14 @@
 
     </main>
 </body>
-<script src="../js/script.js"></script>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.links');
+
+    menuToggle.addEventListener('click', () => {
+        links.classList.toggle('active');
+    });
+</script>
+<script src="../js/categorias.js"></script>
+<script src="../js/slider.js"></script>
+<script src="../js/filtro_vets.js"></script>

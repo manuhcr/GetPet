@@ -129,6 +129,7 @@ body {
     display: flex;
     transition: transform 0.5s ease-in-out;
     margin-right: 250px;
+    margin-top: 50px;
 }
 
 /* Estilo geral dos slides */
@@ -346,11 +347,12 @@ body {
     position: absolute;
     top: -30px;
     display: none;
+    z-index: -1;
 }
 
 .quadrado {
     background-color: #2e501c;
-    border-radius: 60px 0 20px 20px;
+    border-radius: 20px 20px 20px 20px;
     padding: 40px 20px;
     width: 800px;
     min-height: 180px;
@@ -365,19 +367,19 @@ body {
 }
 
 .c-02 {
-    background-color: #4f6f1d;
+    background-color: #a3c83b;
 }
 
 .c-03 {
-    background-color: #6f901f;
+    background-color: #e7e496;
 }
 
 .c-04 {
-    background-color: #88a82a;
+    background-color: #fdeeca;
 }
 
 .c-05 {
-    background-color: #b44944;
+    background-color: #ef6a66;
 }
 
 .calda1 {
@@ -397,12 +399,10 @@ body {
 
 .calda4 {
     background-color: #fdeeca;
-    /* mesma cor do .n-4 */
-    left: 60%;
+    left: 64.3%;
 }
 
 .calda5 {
     background-color: #ef6a66;
-    /* mesma cor do .n-5 */
-    left: 80%;
+    left: 81.15%;
 }

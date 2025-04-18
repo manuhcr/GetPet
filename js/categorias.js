@@ -37,32 +37,42 @@ const links = document.querySelector('.links');
 menuToggle.addEventListener('click', () => {
     links.classList.toggle('active');
 });
-const textos = [
-    "Conteúdo da Categoria 1",
-    "Conteúdo da Categoria 2",
-    "Conteúdo da Categoria 3",
-    "Conteúdo da Categoria 4",
-    "Conteúdo da Categoria 5",
-];
-
 function apareceConteudo(index, classe1, classe2) {
-    const conteudo = document.getElementById("conteudo");
+    const conteudos = document.getElementById("conteudo");
     const calda = document.getElementById("calda");
+    const botoes = document.querySelectorAll(".botao"); // Seleciona todos os botões com a classe "botao"
 
-    const conteudoVisivel = conteudo.style.display === "block";
+    // Remover a classe 'active' de todos os botões antes de adicionar ao botão clicado
+    botoes.forEach(botao => botao.classList.remove('active'));
 
-    if (conteudoVisivel) {
-        conteudo.style.display = "none";
-        calda.style.display = "none";
-    } else {
-        conteudo.className = "quadrado " + classe1;
+    // Adicionar a classe 'active' ao botão clicado
+    botoes[index].classList.add('active');
+
+    // Configurar o conteúdo de acordo com o botão clicado
+    if (conteudos && calda) {
+        conteudos.className = "quadrado " + classe1;
+        conteudos.style.width = '1340px';
         calda.className = "calda calda" + classe2;
-        conteudo.textContent = textos[index];
-        conteudo.style.display = "block";
+        conteudos.style.transition = 'all ease-in-out 0.2s';
+        conteudos.textContent = `Conteúdo do botão ${index + 1}`;
+        conteudos.style.display = "block";
         calda.style.display = "block";
     }
+    let conteudoVisivel = null; // Variável para controlar o card atualmente visível
+
+    botoes.forEach((botao, index) => {
+        botao.addEventListener("click", () => {
+            // Se o card atual já está visível, oculta tudo
+            if (conteudoVisivel === index) {
+                conteudos.style.display = "none";
+                calda.style.display = "none";
+                conteudoVisivel = null; // Reseta o controle de visibilidade
+            } else {
+                // Atualiza o controle de visibilidade
+                conteudoVisivel = index;
+            }
+        });
+    });
 }
-document.getElementById("calda").addEventListener("click", () => {
-    document.getElementById("conteudo").style.display = "none";
-    document.getElementById("calda").style.display = "none";
-});
+
+
