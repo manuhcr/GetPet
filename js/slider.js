@@ -19,3 +19,12 @@ function proxSlide() {
 function comecarSlider() {
     setInterval(proxSlide, 5000);
 }
+showSlide(slideAtual);
+comecarSlider();
+// Adiciona evento de clique nos indicadores
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener("click", () => {
+        slideAtual = index;
+        showSlide(slideAtual);
+    });
+});
